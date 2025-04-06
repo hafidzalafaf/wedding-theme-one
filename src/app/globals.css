@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SpringInMay';
+    src: url('/public/assets/font/spring-in-may.ttf');
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Style+Script&display=swap');
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* @font-face {
+  font-family: 'SpringInMay';
+  src: url('/public/assets/font/spring-in-may.ttf');
+  font-style: normal;
+}    */
+
+.great-vibes {
+    font-family: 'Kalnia', serif;
+    font-optical-sizing: auto;
+}
+
+.spring-font {
+    font-family: 'SpringInMay', sans-serif;
+}
+.analogue-font {
+    font-family: 'analogueNrmal', sans-serif;
+}
+
+.inter-font {
+    font-family: 'Inter', system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.playball-font {
+    font-family: 'Playball', cursive;
+    font-style: normal;
+}
+
+.quicksand-font {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+}
+
+.bg-transition-top {
+    background: linear-gradient(rgba(243, 239, 236, 0), rgba(136, 178, 148, 0.8));
+}
+.bg-transition-top-2 {
+    background: linear-gradient(rgba(243, 239, 236, 0), rgba(136, 178, 148, 1));
+}
+.bg-transition-bottom {
+    background: linear-gradient(rgba(136, 178, 148, 0.8), rgba(243, 239, 236, 0));
+}

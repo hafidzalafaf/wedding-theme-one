@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'SpringInMay';
-    src: url('/public/assets/font/spring-in-may.ttf');
+    font-family: 'English111 Vivace BT';
+    src: url('/assets/font/E111Viva.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Analogue';
+    src: url('/assets/font/AnalogueRed-55Regular.ttf') format('truetype');
     font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
@@ -31,7 +36,7 @@ body {
 }
 
 /* @font-face {
-  font-family: 'SpringInMay';
+  font-family: 'Viva';
   src: url('/public/assets/font/spring-in-may.ttf');
   font-style: normal;
 }    */
@@ -41,11 +46,12 @@ body {
     font-optical-sizing: auto;
 }
 
-.spring-font {
-    font-family: 'SpringInMay', sans-serif;
+.viva-font {
+    font-family: 'English111 Vivace BT', cursive;
 }
+
 .analogue-font {
-    font-family: 'analogueNrmal', sans-serif;
+    font-family: 'Analogue', Sans-serif;
 }
 
 .inter-font {
@@ -65,11 +71,8 @@ body {
 }
 
 .bg-transition-top {
-    background: linear-gradient(rgba(243, 239, 236, 0), rgba(136, 178, 148, 0.8));
-}
-.bg-transition-top-2 {
-    background: linear-gradient(rgba(243, 239, 236, 0), rgba(136, 178, 148, 1));
+    background: linear-gradient(rgba(253, 251, 212, 0), rgba(253, 251, 212, 1));
 }
 .bg-transition-bottom {
-    background: linear-gradient(rgba(136, 178, 148, 0.8), rgba(243, 239, 236, 0));
+    background: linear-gradient(rgba(72, 60, 50, 0), rgba(72, 60, 50, 1));
 }

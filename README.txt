@@ -18,4 +18,22 @@ Bank Mandiri 1390029292608
 - Warna Taupe, Cream dan putih 
 - Taupe : #483C32
 - Cream : #FDFBD4
+- Cream : #F9E4BC
 - Putih : #FFFFFF
+
+
+#### FIREBASE DOCUMENT ID
+- 7A6ba3pjsQUNMccifTtM
+
+# KEKURANGAN
+- Ubah font analogue 
+- Slider image
+- Sesuaikan semua konten menjadi ulfa dan ahmad 
+- Compress image menjadi webp
+- Aktifkan firebase ucapan 
+- 
+
+
+- nama panggilan yang cowok 
+- ig ne yang cowok sama ig ne ulfa 
+- 

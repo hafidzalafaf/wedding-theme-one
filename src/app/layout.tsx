@@ -37,7 +37,7 @@ export default function RootLayout({
                 />
                 <meta property="og:url" content="https://wedding-ulfa-hasan.netlify.app/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image:type" content="image/jpeg" />
+                <meta property="og:image:type" content="image/jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.jpg" />

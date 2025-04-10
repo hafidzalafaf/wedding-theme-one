@@ -10,7 +10,6 @@ import {
     FadeOut,
     fadeFromLeftConfig,
     fadeFromRightConfig,
-    FadeInZoomIn,
     ZoomIn,
     ScaleIn,
 } from '../utils/GsapAnimation'
@@ -29,7 +28,6 @@ import {
     Timestamp,
 } from 'firebase/firestore'
 import Image from 'next/image'
-import ModalImage from 'react-modal-image'
 import moment from 'moment'
 import 'moment/locale/id'
 
@@ -46,6 +44,10 @@ const firebaseConfig = {
 // Inisialisasi Firebase
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
+
+// Gunakan require agar TypeScript tidak complain
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const ModalImage = require('react-modal-image').default
 
 export default function Home() {
     const [state, setState] = useState(1)
@@ -698,9 +700,7 @@ export default function Home() {
 
                                         <div className="bg-white rounded-tr-[160px]">
                                             <motion.img
-                                                initial={ZoomIn.initial}
-                                                whileInView={ZoomIn.whileInView}
-                                                exit={ZoomIn.exit}
+                                                {...ZoomIn}
                                                 transition={{ duration: 0.5, delay: 0.5 }}
                                                 src={'/assets/images/image-2.webp'}
                                                 alt="image flower"
@@ -782,9 +782,7 @@ export default function Home() {
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
-                                                        initial={ScaleIn.initial}
-                                                        whileInView={ScaleIn.whileInView}
-                                                        exit={ScaleIn.exit}
+                                                        {...ScaleIn}
                                                         transition={{
                                                             duration: 0.5,
                                                             delay: 1.3,
@@ -801,9 +799,7 @@ export default function Home() {
                                         </div>
                                         <div className="bg-white rounded-tl-[160px] mt-14">
                                             <motion.img
-                                                initial={ZoomIn.initial}
-                                                whileInView={ZoomIn.whileInView}
-                                                exit={ZoomIn.exit}
+                                                {...ZoomIn}
                                                 transition={{ duration: 0.5, delay: 0.5 }}
                                                 src={'/assets/images/image-10.webp'}
                                                 alt="image flower"
@@ -885,9 +881,7 @@ export default function Home() {
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
-                                                        initial={ScaleIn.initial}
-                                                        whileInView={ScaleIn.whileInView}
-                                                        exit={ScaleIn.exit}
+                                                        {...ScaleIn}
                                                         transition={{
                                                             duration: 0.5,
                                                             delay: 1.3,
@@ -938,9 +932,7 @@ export default function Home() {
                                         className=" w-full h-full overflow-hidden mx-auto bg-[#F9E4BC]"
                                     >
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -954,9 +946,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -970,9 +960,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -986,9 +974,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1002,9 +988,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1018,9 +1002,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1034,9 +1016,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1050,9 +1030,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1066,9 +1044,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,
@@ -1082,9 +1058,7 @@ export default function Home() {
                                             />
                                         </motion.div>
                                         <motion.div
-                                            initial={ZoomIn.initial}
-                                            whileInView={ZoomIn.whileInView}
-                                            exit={ZoomIn.exit}
+                                            {...ZoomIn}
                                             transition={{
                                                 duration: 0.5,
                                                 delay: 0.2,

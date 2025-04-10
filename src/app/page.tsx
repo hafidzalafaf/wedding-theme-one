@@ -575,7 +575,7 @@ export default function Home() {
                                                     transition={{ duration: 0.5, delay: 0.7 }}
                                                     className=" viva-font text-right text-[#483C32] font-normal text-2xl mb-2"
                                                 >
-                                                    Hasan Nurhasan A.Md.Kep
+                                                    Ahmad Nurhasan A.Md.Kep
                                                 </motion.h6>
                                                 <motion.p
                                                     initial={animationConfig.initial}

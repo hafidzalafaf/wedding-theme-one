@@ -2,7 +2,18 @@
 import FlowersFallLeft from '../components/flowers-fall-left'
 import FlowerdFallRight from '../components/flowers-fall-right'
 import { AnimatePresence, motion } from 'framer-motion'
-import { animationConfig, FadeIn, FadeIn2, FadeIn3, FadeOut } from '../utils/GsapAnimation'
+import {
+    animationConfig,
+    FadeIn,
+    FadeIn2,
+    FadeIn3,
+    FadeOut,
+    fadeFromLeftConfig,
+    fadeFromRightConfig,
+    FadeInZoomIn,
+    ZoomIn,
+    ScaleIn,
+} from '../utils/GsapAnimation'
 import { useEffect, useRef, useState } from 'react'
 import Countdown from '../components/countdown'
 import CopyToClipboard from '../components/copyToClipboard'
@@ -145,7 +156,7 @@ export default function Home() {
 
     const handleSaveTheDate = () => {
         const date = new Date('2025-04-27T09:00:00') // Ganti dengan tanggal acara
-        const title = ' Undangan Pernikahan Ulfa  Ahmad 💍'
+        const title = ' Undangan Pernikahan Ulfa & Hasan 💍'
         const description = 'Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏'
 
         // Menampilkan alert
@@ -217,7 +228,7 @@ export default function Home() {
                                         transition={{ duration: 0.5, delay: 0.8 }}
                                         className="viva-font  font-normal text-center text-5xl md:text-6xl lg:text-6xl xl:text-7xl text-white"
                                     >
-                                        Ulfa & Ahmad
+                                        Ulfa & Hasan
                                     </motion.h1>
                                     <div className="flex flex-col gap-2 md:gap-3">
                                         <motion.div
@@ -246,7 +257,7 @@ export default function Home() {
                                             initial="hidden"
                                             animate="visible"
                                             exit="exit"
-                                            transition={{ duration: 0.5, delay: 1.1 }}
+                                            transition={{ duration: 0.5, delay: 1.6 }}
                                             className="inter-font  text-center font-semibold text-slate-200 text-xs md:text-xs lg:text-md px-10"
                                         >
                                             Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan
@@ -313,7 +324,7 @@ export default function Home() {
                                             transition={{ duration: 1, delay: 0.5 }}
                                             className="viva-font font-normal text-center text-4xl md:text-6xl lg:text-6xl xl:text-7xl  text-[#483C32]"
                                         >
-                                            Ulfa & Ahmad
+                                            Ulfa & Hasan
                                         </motion.h1>
                                         <motion.p
                                             variants={FadeIn}
@@ -323,7 +334,7 @@ export default function Home() {
                                             transition={{ duration: 1, delay: 0.8 }}
                                             className="inter-font text-center font-semibold text-[#483C32] text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl"
                                         >
-                                            23.11.2024
+                                            27.04.2025
                                         </motion.p>
                                         <div className="flex justify-center">
                                             <motion.button
@@ -350,8 +361,6 @@ export default function Home() {
                                     }}
                                     className="h-screen w-full !bg-cover !bg-no-repeat !bg-bottom relative flex justify-center items-center "
                                 >
-                                    {/* {FlowersFallLeft()} */}
-                                    {/* {FlowerdFallRight()} */}
                                     <div className="">
                                         <div className="bg-white rounded-[32px] h-3/4 my-auto border-2 border-[#F9E4BC]   flex justify-center items-center mx-6">
                                             <div className="px-6  flex flex-col gap-4 justify-center items-center py-10">
@@ -360,10 +369,10 @@ export default function Home() {
                                                         initial={animationConfig.initial}
                                                         whileInView={animationConfig.whileInView}
                                                         exit={animationConfig.exit}
-                                                        transition={{ duration: 0.5, delay: 0.8 }}
+                                                        transition={{ duration: 0.5, delay: 0.1 }}
                                                         className="text-center viva-font mb-6 text-[#483C32] font-medium text-4xl"
                                                     >
-                                                        Ulfa & Ahmad
+                                                        Ulfa & Hasan
                                                     </motion.h6>
                                                 </div>
                                                 <div className="">
@@ -371,7 +380,7 @@ export default function Home() {
                                                         initial={animationConfig.initial}
                                                         whileInView={animationConfig.whileInView}
                                                         exit={animationConfig.exit}
-                                                        transition={{ duration: 0.5, delay: 0.8 }}
+                                                        transition={{ duration: 0.5, delay: 0.3 }}
                                                         className="text-center inter-font text-[#534b53] font-normal text-base"
                                                     >
                                                         Dan di antara tanda-tanda kekuasaan-Nya
@@ -382,7 +391,19 @@ export default function Home() {
                                                         sayang. Sesungguhnya pada yang demikian itu
                                                         benar-benar terdapat tanda-tanda bagi kaum
                                                         yang berfikir. <br /> <br />
-                                                        (QS Ar-Rum : 21)
+                                                        <motion.span
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.8,
+                                                            }}
+                                                        >
+                                                            (QS Ar-Rum : 21)
+                                                        </motion.span>
                                                     </motion.h6>
                                                 </div>
                                             </div>
@@ -408,40 +429,78 @@ export default function Home() {
                                         />
                                         <div className="flex justify-center px-6">
                                             <div className="relative pb-12 mr-10">
-                                                <h2 className="analogue-font text-[#534b53] text-[32px] italic">
+                                                <motion.h2
+                                                    initial={fadeFromLeftConfig.initial}
+                                                    whileInView={fadeFromLeftConfig.whileInView}
+                                                    exit={fadeFromLeftConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    className="analogue-font text-[#534b53] text-[32px] italic"
+                                                >
                                                     Kedua
-                                                </h2>
-                                                <span className="viva-font text-[#534b53] text-[32px] italic absolute bottom-7 left-10">
+                                                </motion.h2>
+                                                <motion.span
+                                                    initial={fadeFromRightConfig.initial}
+                                                    whileInView={fadeFromRightConfig.whileInView}
+                                                    exit={fadeFromRightConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    className="viva-font text-[#534b53] text-[32px] italic absolute bottom-7 left-10"
+                                                >
                                                     Mempelai
-                                                </span>
+                                                </motion.span>
                                             </div>
                                         </div>
-                                        <p className=" px-6 text-sm text-[#534b53] font-bold inter-font text-center">
+                                        <motion.p
+                                            initial={animationConfig.initial}
+                                            whileInView={animationConfig.whileInView}
+                                            exit={animationConfig.exit}
+                                            transition={{ duration: 0.5, delay: 0.3 }}
+                                            className=" px-6 text-sm text-[#534b53] font-bold inter-font text-center"
+                                        >
                                             Assalamu’alaikum Warahmatullahi Wabarakatuh
-                                        </p>
-                                        <p className=" px-6 text-sm quicksand-font text-center text-[#534b53] text-opacity-70 font-normal">
+                                        </motion.p>
+                                        <motion.p
+                                            initial={animationConfig.initial}
+                                            whileInView={animationConfig.whileInView}
+                                            exit={animationConfig.exit}
+                                            transition={{ duration: 0.5, delay: 0.4 }}
+                                            className=" px-6 text-sm quicksand-font text-center text-[#534b53] text-opacity-70 font-normal"
+                                        >
                                             Maha Suci Allah yang telah menciptakan makhluk-Nya
                                             berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah
                                             mengiringi pernikahan kami.
-                                        </p>
+                                        </motion.p>
                                         <div className="mt-10">
                                             <div className="relative">
-                                                <div className="absolute bg-[#483C32] h-[330px] w-[270px] bg-opacity-10 top-5 left-5 z-10"></div>
-                                                <Image
-                                                    src="/assets/images/image-11.webp"
-                                                    className="z-20 relative object-cover h-[330px]"
-                                                    alt="couple image"
-                                                    width={270}
-                                                    height={330}
-                                                />
+                                                <motion.div
+                                                    initial={fadeFromLeftConfig.initial}
+                                                    whileInView={fadeFromLeftConfig.whileInView}
+                                                    exit={fadeFromLeftConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.5 }}
+                                                    className="absolute bg-[#483C32] h-[330px] w-[270px] bg-opacity-10 top-5 left-5 z-10"
+                                                ></motion.div>
+                                                <motion.div
+                                                    initial={fadeFromRightConfig.initial}
+                                                    whileInView={fadeFromRightConfig.whileInView}
+                                                    exit={fadeFromRightConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.6 }}
+                                                    className=""
+                                                >
+                                                    <Image
+                                                        src="/assets/images/image-11.webp"
+                                                        className="z-20 relative object-cover h-[330px]"
+                                                        alt="couple image"
+                                                        width={270}
+                                                        height={330}
+                                                    />
+                                                </motion.div>
                                             </div>
                                             <div className="px-6 mt-10">
                                                 <motion.h6
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.8 }}
-                                                    className=" analogue-font text-[#483C32] font-normal text-2xl mb-2"
+                                                    transition={{ duration: 0.5, delay: 0.2 }}
+                                                    className=" viva-font text-[#483C32] font-normal text-2xl mb-2"
                                                 >
                                                     Ulfatul Khasanah A.Md.Kep
                                                 </motion.h6>
@@ -449,7 +508,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 1 }}
+                                                    transition={{ duration: 0.5, delay: 0.5 }}
                                                     className=" text-xs  font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
                                                     Putri Kedua Bp Sanyoto & Ibu Khalimah Sadiyah
@@ -458,16 +517,16 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 1.3 }}
+                                                    transition={{ duration: 0.5, delay: 0.7 }}
                                                     className="flex justify-start"
                                                 >
                                                     <a
-                                                        href="https://www.instagram.com/dantttt___/"
+                                                        href="https://www.instagram.com/ulfaaaa_____/"
                                                         target="_blank"
                                                         className="text-[#483C32] text-center    text-sm "
                                                     >
                                                         <i className="text-sm fa-brands fa-square-instagram"></i>{' '}
-                                                        @dantttt___
+                                                        @ulfaaaa_____
                                                     </a>
                                                 </motion.div>
                                             </div>
@@ -476,15 +535,27 @@ export default function Home() {
                                             initial={animationConfig.initial}
                                             whileInView={animationConfig.whileInView}
                                             exit={animationConfig.exit}
-                                            transition={{ duration: 0.5, delay: 0.3 }}
+                                            transition={{ duration: 0.5, delay: 0.5 }}
                                             className="text-center viva-font text-[#534b53] font-medium text-4xl my-3"
                                         >
                                             &
                                         </motion.h6>
                                         <div className="mt-10 mb-10">
                                             <div className="relative">
-                                                <div className="absolute bg-[#483C32] h-[330px] w-[270px] bg-opacity-10 top-5 right-5 z-10"></div>
-                                                <div className="h-[330px] w-[270px] overflow-hidden ml-auto z-20 relative">
+                                                <motion.div
+                                                    initial={fadeFromLeftConfig.initial}
+                                                    whileInView={fadeFromLeftConfig.whileInView}
+                                                    exit={fadeFromLeftConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    className="absolute bg-[#483C32] h-[330px] w-[270px] bg-opacity-10 top-5 right-5 z-10"
+                                                ></motion.div>
+                                                <motion.div
+                                                    initial={fadeFromRightConfig.initial}
+                                                    whileInView={fadeFromRightConfig.whileInView}
+                                                    exit={fadeFromRightConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.5 }}
+                                                    className="h-[330px] w-[270px] overflow-hidden ml-auto z-20 relative"
+                                                >
                                                     <Image
                                                         src="/assets/images/image-12.webp"
                                                         className="object-cover object-[50%_35%] scale-120 transform h-[330px] "
@@ -492,23 +563,23 @@ export default function Home() {
                                                         width={270}
                                                         height={330}
                                                     />
-                                                </div>
+                                                </motion.div>
                                             </div>
                                             <div className="px-6 mt-10">
                                                 <motion.h6
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.8 }}
-                                                    className=" analogue-font text-right text-[#483C32] font-normal text-2xl mb-2"
+                                                    transition={{ duration: 0.5, delay: 0.7 }}
+                                                    className=" viva-font text-right text-[#483C32] font-normal text-2xl mb-2"
                                                 >
-                                                    Ahmad Nurhasan A.Md.Kep
+                                                    Hasan Nurhasan A.Md.Kep
                                                 </motion.h6>
                                                 <motion.p
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 1 }}
+                                                    transition={{ duration: 0.5, delay: 0.8 }}
                                                     className=" text-xs text-right font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
                                                     Putra Ketiga Bp Nurman (Alm) & Ibu Entin
@@ -517,16 +588,16 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 1.3 }}
+                                                    transition={{ duration: 0.5, delay: 1 }}
                                                     className="flex justify-end"
                                                 >
                                                     <a
-                                                        href="https://www.instagram.com/dantttt___/"
+                                                        href="https://www.instagram.com/ahmadnrhsn/"
                                                         target="_blank"
                                                         className="text-[#483C32] text-center   text-sm "
                                                     >
                                                         <i className="text-sm fa-brands fa-square-instagram"></i>{' '}
-                                                        @dantttt___
+                                                        @ahmadnrhsn
                                                     </a>
                                                 </motion.div>
                                             </div>
@@ -552,15 +623,21 @@ export default function Home() {
                                             height={140}
                                         />
                                         <div className="flex justify-center px-6">
-                                            <h2 className="analogue-font text-white text-[32px] italic">
+                                            <motion.h2
+                                                initial={animationConfig.initial}
+                                                whileInView={animationConfig.whileInView}
+                                                exit={animationConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.3 }}
+                                                className="analogue-font text-white text-[32px] italic"
+                                            >
                                                 Save The Date
-                                            </h2>
+                                            </motion.h2>
                                         </div>
                                         <motion.div
                                             initial={animationConfig.initial}
                                             whileInView={animationConfig.whileInView}
                                             exit={animationConfig.exit}
-                                            transition={{ duration: 0.5, delay: 0.3 }}
+                                            transition={{ duration: 0.5, delay: 0.5 }}
                                             className=""
                                         >
                                             <Countdown key={1} date="2025-04-27T09:00:00" />
@@ -568,11 +645,10 @@ export default function Home() {
                                         <div className="flex justify-center mt-10">
                                             <motion.button
                                                 onClick={handleSaveTheDate}
-                                                variants={FadeIn2}
-                                                initial="hidden"
-                                                animate="visible"
-                                                exit="exit"
-                                                transition={{ duration: 0.5, delay: 1 }}
+                                                initial={animationConfig.initial}
+                                                whileInView={animationConfig.whileInView}
+                                                exit={animationConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.5 }}
                                                 className="px-6 py-2 rounded-3xl border border-white text-white text-sm  xl:text-md"
                                             >
                                                 <i className="fa-solid fa-calendar mr-2 text-white"></i>
@@ -599,17 +675,33 @@ export default function Home() {
                                         />
                                         <div className="flex justify-center px-6">
                                             <div className="relative pb-12 mr-10">
-                                                <h2 className="analogue-font text-[#534b53] text-[32px] italic">
+                                                <motion.h2
+                                                    initial={fadeFromLeftConfig.initial}
+                                                    whileInView={fadeFromLeftConfig.whileInView}
+                                                    exit={fadeFromLeftConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    className="analogue-font text-[#534b53] text-[32px] italic"
+                                                >
                                                     Wedding
-                                                </h2>
-                                                <span className="viva-font text-[#534b53] text-[48px] italic absolute bottom-2 left-10">
+                                                </motion.h2>
+                                                <motion.span
+                                                    initial={fadeFromRightConfig.initial}
+                                                    whileInView={fadeFromRightConfig.whileInView}
+                                                    exit={fadeFromRightConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    className="viva-font text-[#534b53] text-[48px] italic absolute bottom-2 left-10"
+                                                >
                                                     Event
-                                                </span>
+                                                </motion.span>
                                             </div>
                                         </div>
 
                                         <div className="bg-white rounded-tr-[160px]">
-                                            <img
+                                            <motion.img
+                                                initial={ZoomIn.initial}
+                                                whileInView={ZoomIn.whileInView}
+                                                exit={ZoomIn.exit}
+                                                transition={{ duration: 0.5, delay: 0.5 }}
                                                 src={'/assets/images/image-2.webp'}
                                                 alt="image flower"
                                                 className="w-full h-64 object-cover object-[50%_65%] rounded-tr-[160px]"
@@ -619,7 +711,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 0.6 }}
                                                     className="text-center analogue-font text-white font-normal italic text-3xl"
                                                 >
                                                     Akad
@@ -627,23 +719,51 @@ export default function Home() {
                                             </div>
                                             <div className="bg-white px-6 pb-6">
                                                 <div className="flex gap-4 items-center border-b border-[#483C32] border-opacity-30 justify-center">
-                                                    <h6 className="text-[70px] text-[#483C32] quicksand-font font-normal">
+                                                    <motion.h6
+                                                        initial={fadeFromLeftConfig.initial}
+                                                        whileInView={fadeFromLeftConfig.whileInView}
+                                                        exit={fadeFromLeftConfig.exit}
+                                                        transition={{ duration: 0.5, delay: 0.7 }}
+                                                        className="text-[70px] text-[#483C32] quicksand-font font-normal"
+                                                    >
                                                         27
-                                                    </h6>
+                                                    </motion.h6>
                                                     <div className="flex flex-col gap-1">
-                                                        <p className="text-[#483C32] quicksand-font">
+                                                        <motion.p
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.8,
+                                                            }}
+                                                            className="text-[#483C32] quicksand-font"
+                                                        >
                                                             Minggu,
-                                                        </p>
-                                                        <p className="text-[#483C32] quicksand-font">
+                                                        </motion.p>
+                                                        <motion.p
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.9,
+                                                            }}
+                                                            className="text-[#483C32] quicksand-font"
+                                                        >
                                                             April 2025
-                                                        </p>
+                                                        </motion.p>
                                                     </div>
                                                 </div>
                                                 <motion.p
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 1.1 }}
                                                     className="text-sm leading-6 font-normal mt-4 mb-2 quicksand-font text-[#483C32] text-center"
                                                 >
                                                     <i className="fa-solid fa-clock mr-2"></i>
@@ -653,7 +773,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 1.2 }}
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     {' '}
@@ -662,14 +782,14 @@ export default function Home() {
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
-                                                        initial={animationConfig.initial}
-                                                        whileInView={animationConfig.whileInView}
-                                                        exit={animationConfig.exit}
+                                                        initial={ScaleIn.initial}
+                                                        whileInView={ScaleIn.whileInView}
+                                                        exit={ScaleIn.exit}
                                                         transition={{
                                                             duration: 0.5,
-                                                            delay: 0.3,
+                                                            delay: 1.3,
                                                         }}
-                                                        href="https://maps.app.goo.gl/PaFQo5daoE74Acgh7"
+                                                        href="https://maps.app.goo.gl/ByJT35gBf3Fn5eZt9"
                                                         target="_blank"
                                                         className="px-5 py-2 mt-4 rounded-3xl border border-[#483C32] text-[#483C32]  font-normal text-sm"
                                                     >
@@ -680,7 +800,11 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className="bg-white rounded-tl-[160px] mt-14">
-                                            <img
+                                            <motion.img
+                                                initial={ZoomIn.initial}
+                                                whileInView={ZoomIn.whileInView}
+                                                exit={ZoomIn.exit}
+                                                transition={{ duration: 0.5, delay: 0.5 }}
                                                 src={'/assets/images/image-10.webp'}
                                                 alt="image flower"
                                                 className="w-full h-64 object-cover object-[50%_35%] rounded-tl-[160px]"
@@ -690,7 +814,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 0.6 }}
                                                     className="text-center analogue-font text-white font-normal italic text-3xl"
                                                 >
                                                     Resepsi
@@ -698,33 +822,61 @@ export default function Home() {
                                             </div>
                                             <div className="bg-white px-6 pb-6">
                                                 <div className="flex gap-4 items-center border-b border-[#483C32] border-opacity-30 justify-center">
-                                                    <h6 className="text-[70px] text-[#483C32] quicksand-font font-normal">
+                                                    <motion.h6
+                                                        initial={fadeFromLeftConfig.initial}
+                                                        whileInView={fadeFromLeftConfig.whileInView}
+                                                        exit={fadeFromLeftConfig.exit}
+                                                        transition={{ duration: 0.5, delay: 0.7 }}
+                                                        className="text-[70px] text-[#483C32] quicksand-font font-normal"
+                                                    >
                                                         27
-                                                    </h6>
+                                                    </motion.h6>
                                                     <div className="flex flex-col gap-1">
-                                                        <p className="text-[#483C32] quicksand-font">
+                                                        <motion.p
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.8,
+                                                            }}
+                                                            className="text-[#483C32] quicksand-font"
+                                                        >
                                                             Minggu,
-                                                        </p>
-                                                        <p className="text-[#483C32] quicksand-font">
+                                                        </motion.p>
+                                                        <motion.p
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.9,
+                                                            }}
+                                                            className="text-[#483C32] quicksand-font"
+                                                        >
                                                             April 2025
-                                                        </p>
+                                                        </motion.p>
                                                     </div>
                                                 </div>
                                                 <motion.p
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 1 }}
                                                     className="text-sm leading-6 font-normal mt-4 mb-2 quicksand-font text-[#483C32] text-center"
                                                 >
                                                     <i className="fa-solid fa-clock mr-2"></i>
-                                                    09.00 WIB
+                                                    11.00 WIB - Selesai
                                                 </motion.p>
                                                 <motion.p
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 1.1 }}
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     {' '}
@@ -733,14 +885,14 @@ export default function Home() {
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
-                                                        initial={animationConfig.initial}
-                                                        whileInView={animationConfig.whileInView}
-                                                        exit={animationConfig.exit}
+                                                        initial={ScaleIn.initial}
+                                                        whileInView={ScaleIn.whileInView}
+                                                        exit={ScaleIn.exit}
                                                         transition={{
                                                             duration: 0.5,
-                                                            delay: 0.3,
+                                                            delay: 1.3,
                                                         }}
-                                                        href="https://maps.app.goo.gl/PaFQo5daoE74Acgh7"
+                                                        href="https://maps.app.goo.gl/ByJT35gBf3Fn5eZt9"
                                                         target="_blank"
                                                         className="px-5 py-2 mt-4 rounded-3xl border border-[#483C32] text-[#483C32]  font-normal text-sm"
                                                     >
@@ -757,14 +909,27 @@ export default function Home() {
                                 <section className="w-full bg-white  relative pt-10 pb-0 overflow-hidden ">
                                     <div className="flex justify-center px-6">
                                         <div className="relative pb-12 mr-10">
-                                            <h2 className="analogue-font text-[#534b53] text-[32px] italic">
+                                            <motion.h2
+                                                initial={fadeFromLeftConfig.initial}
+                                                whileInView={fadeFromLeftConfig.whileInView}
+                                                exit={fadeFromLeftConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.3 }}
+                                                className="analogue-font text-[#534b53] text-[32px] italic"
+                                            >
                                                 Momen
-                                            </h2>
-                                            <span className="viva-font text-[#534b53] text-[32px] italic absolute bottom-7 left-10">
+                                            </motion.h2>
+                                            <motion.span
+                                                initial={fadeFromRightConfig.initial}
+                                                whileInView={fadeFromRightConfig.whileInView}
+                                                exit={fadeFromRightConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.3 }}
+                                                className="viva-font text-[#534b53] text-[32px] italic absolute bottom-7 left-10"
+                                            >
                                                 Bahagia
-                                            </span>
+                                            </motion.span>
                                         </div>
                                     </div>
+
                                     <motion.div
                                         initial={animationConfig.initial}
                                         whileInView={animationConfig.whileInView}
@@ -772,56 +937,166 @@ export default function Home() {
                                         transition={{ duration: 0.5, delay: 0.3 }}
                                         className=" w-full h-full overflow-hidden mx-auto bg-[#F9E4BC]"
                                     >
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-1.webp'}
-                                            large={'/assets/images/image-8.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-2.webp'}
-                                            large={'/assets/images/image-1.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-3.webp'}
-                                            large={'/assets/images/image-2.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-4.webp'}
-                                            large={'/assets/images/image-4.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-5.webp'}
-                                            large={'/assets/images/image-3.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-6.webp'}
-                                            large={'/assets/images/image-5.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-7.webp'}
-                                            large={'/assets/images/image-7.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-8.webp'}
-                                            large={'/assets/images/image-6.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-9.webp'}
-                                            large={'/assets/images/image-10.webp'}
-                                            alt=""
-                                        />
-                                        <ModalImage
-                                            small={'/assets/images/couple-sm-11.webp'}
-                                            large={'/assets/images/image-9.webp'}
-                                            alt=""
-                                        />
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-1.webp'}
+                                                large={'/assets/images/image-8.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-2.webp'}
+                                                large={'/assets/images/image-1.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-3.webp'}
+                                                large={'/assets/images/image-2.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-4.webp'}
+                                                large={'/assets/images/image-4.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-5.webp'}
+                                                large={'/assets/images/image-3.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-6.webp'}
+                                                large={'/assets/images/image-5.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-7.webp'}
+                                                large={'/assets/images/image-7.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-8.webp'}
+                                                large={'/assets/images/image-6.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-9.webp'}
+                                                large={'/assets/images/image-10.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            initial={ZoomIn.initial}
+                                            whileInView={ZoomIn.whileInView}
+                                            exit={ZoomIn.exit}
+                                            transition={{
+                                                duration: 0.5,
+                                                delay: 0.2,
+                                            }}
+                                            className=""
+                                        >
+                                            <ModalImage
+                                                small={'/assets/images/couple-sm-11.webp'}
+                                                large={'/assets/images/image-9.webp'}
+                                                alt=""
+                                            />
+                                        </motion.div>
                                     </motion.div>
                                 </section>
 
@@ -862,7 +1137,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 0.4 }}
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     {' '}
@@ -873,7 +1148,7 @@ export default function Home() {
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
                                                     exit={animationConfig.exit}
-                                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                                    transition={{ duration: 0.5, delay: 0.5 }}
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     Namun jika Anda ingin memberikan hadiah, kami
@@ -887,11 +1162,15 @@ export default function Home() {
                                                                 setShowGift(!showGift)
                                                                 setShowKado(false)
                                                             }}
-                                                            variants={FadeIn2}
-                                                            initial="hidden"
-                                                            animate="visible"
-                                                            exit="exit"
-                                                            transition={{ duration: 0.5, delay: 1 }}
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 0.8,
+                                                            }}
                                                             className="px-6 py-2 w-48 rounded-3xl border border-[#483C32] text-[#483C32] xl:text-xl 2xl:text-xl"
                                                         >
                                                             <i className="fa-solid fa-gift"></i>{' '}
@@ -904,11 +1183,15 @@ export default function Home() {
                                                                 setShowKado(!showKado)
                                                                 setShowGift(false)
                                                             }}
-                                                            variants={FadeIn2}
-                                                            initial="hidden"
-                                                            animate="visible"
-                                                            exit="exit"
-                                                            transition={{ duration: 0.5, delay: 1 }}
+                                                            initial={animationConfig.initial}
+                                                            whileInView={
+                                                                animationConfig.whileInView
+                                                            }
+                                                            exit={animationConfig.exit}
+                                                            transition={{
+                                                                duration: 0.5,
+                                                                delay: 1,
+                                                            }}
                                                             className="px-6 py-2  w-48 rounded-3xl border border-[#483C32] text-[#483C32] xl:text-xl 2xl:text-xl"
                                                         >
                                                             <i className="fa-solid fa-gifts"></i>{' '}
@@ -1013,26 +1296,26 @@ export default function Home() {
                                                         initial={animationConfig.initial}
                                                         whileInView={animationConfig.whileInView}
                                                         exit={animationConfig.exit}
-                                                        transition={{ duration: 0.5, delay: 0.8 }}
+                                                        transition={{ duration: 0.5, delay: 0.4 }}
                                                         className="text-md leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                     >
                                                         {' '}
-                                                        Dk. Pompongan ds. Siwatu 16/05 kec.
-                                                        Wonotunggal kab. Batang
+                                                        Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec
+                                                        Subah Kab Batang
                                                     </motion.p>
                                                     <motion.p
                                                         initial={animationConfig.initial}
                                                         whileInView={animationConfig.whileInView}
                                                         exit={animationConfig.exit}
-                                                        transition={{ duration: 0.5, delay: 0.3 }}
+                                                        transition={{ duration: 0.5, delay: 0.5 }}
                                                         className="text-md leading-6 font-semibold quicksand-font text-[#483C32] text-center mt-3"
                                                     >
                                                         {' '}
-                                                        An. Khaedar Lafid Daeni
+                                                        An. Ulfatul Khasanah
                                                     </motion.p>
                                                     <div className="flex flex-col mb-6 mt-6">
                                                         <div className="flex justify-center">
-                                                            <CopyToClipboard textToCopy="Dk. Pompongan ds. Siwatu 16/05 kec. Wonotunggal kab. Batang" />
+                                                            <CopyToClipboard textToCopy="Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec Subah Kab Batang" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1069,37 +1352,53 @@ export default function Home() {
 
                                     <div className="mx-6 bg-white p-6 rounded-xl relative z-50">
                                         <form onSubmit={handleSubmit}>
-                                            <input
+                                            <motion.input
                                                 type="text"
                                                 placeholder="Nama"
                                                 value={name}
                                                 onChange={e => setName(e.target.value)}
                                                 required
+                                                initial={animationConfig.initial}
+                                                whileInView={animationConfig.whileInView}
+                                                exit={animationConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.3 }}
                                                 className="w-full border-slate-100 p-3 rounded-xl border mb-4 text-[#483C32]"
                                             />
-                                            <textarea
+                                            <motion.textarea
                                                 placeholder="Ucapan"
                                                 value={message}
                                                 onChange={e => setMessage(e.target.value)}
                                                 required
+                                                initial={animationConfig.initial}
+                                                whileInView={animationConfig.whileInView}
+                                                exit={animationConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.5 }}
                                                 className="w-full border-slate-100 p-3 rounded-xl border mb-4 text-[#483C32]"
                                             />
-                                            <button
+                                            <motion.button
+                                                initial={animationConfig.initial}
+                                                whileInView={animationConfig.whileInView}
+                                                exit={animationConfig.exit}
+                                                transition={{ duration: 0.5, delay: 0.7 }}
                                                 type="submit"
                                                 className="px-6 py-3  w-full rounded-3xl border border-[#483C32] text-[#483C32]  xl:text-xl 2xl:text-xl"
                                             >
                                                 Kirim
-                                            </button>
+                                            </motion.button>
                                         </form>
 
                                         <div className="overflow-auto max-h-96 mt-10">
                                             {comments.map((comment, key) => (
-                                                <div
+                                                <motion.div
                                                     key={key}
                                                     style={{
                                                         marginTop: '20px',
                                                         borderBottom: '1px solid #ccc',
                                                     }}
+                                                    initial={animationConfig.initial}
+                                                    whileInView={animationConfig.whileInView}
+                                                    exit={animationConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.3 }}
                                                 >
                                                     <strong className="quicksand-font text-[#483C32]">
                                                         {comment.name}
@@ -1116,7 +1415,7 @@ export default function Home() {
                                                             .locale('id')
                                                             .format('dddd, DD MMMM YYYY')}
                                                     </p>
-                                                </div>
+                                                </motion.div>
                                             ))}
                                         </div>
                                     </div>
@@ -1146,7 +1445,7 @@ export default function Home() {
                                             initial={animationConfig.initial}
                                             whileInView={animationConfig.whileInView}
                                             exit={animationConfig.exit}
-                                            transition={{ duration: 0.5, delay: 0.3 }}
+                                            transition={{ duration: 0.5, delay: 0.4 }}
                                             className=" text-sm leading-5 font-normal quicksand-font text-white text-center"
                                         >
                                             Atas do’a & restunya, kami ucapkan terima kasih.
@@ -1155,17 +1454,17 @@ export default function Home() {
                                             initial={animationConfig.initial}
                                             whileInView={animationConfig.whileInView}
                                             exit={animationConfig.exit}
-                                            transition={{ duration: 0.5, delay: 0.3 }}
+                                            transition={{ duration: 0.5, delay: 0.5 }}
                                             className="text-center viva-font text-white mt-3 font-medium text-5xl mb-6"
                                         >
-                                            Ulfa & Ahmad
+                                            Ulfa & Hasan
                                         </motion.h6>
                                         <div className="">
                                             <motion.p
                                                 initial={animationConfig.initial}
                                                 whileInView={animationConfig.whileInView}
                                                 exit={animationConfig.exit}
-                                                transition={{ duration: 0.5, delay: 0.3 }}
+                                                transition={{ duration: 0.5, delay: 0.6 }}
                                                 className=" text-sm leading-5 font-normal quicksand-font text-white text-center"
                                             >
                                                 Made by{' '}

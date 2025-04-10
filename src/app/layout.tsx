@@ -20,9 +20,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+                <title>Undangan Pernikahan Ulfa & Hasan</title>
                 <meta
                     name="description"
-                    content=" Undangan pernikahan kami! Jangan lupa untuk hadir dan merayakannya bersama kami! "
+                    content=" Undangan pernikahan kami! Jangan lupa untuk hadir dan merayakannya bersama kami!"
                 />
                 <meta property="og:title" content="Undangan Pernikahan Ulfa & hasan" />
                 <meta
@@ -33,14 +34,15 @@ export default function RootLayout({
                 {/* Meta tag gambar */}
                 <meta
                     property="og:image"
-                    content="https://wedding-ulfa-hasan.netlify.app/favicon.jpg"
+                    content="https://wedding-ulfa-hasan.vercel.app/favicon.jpg"
                 />
-                <meta property="og:url" content="https://wedding-ulfa-hasan.netlify.app/" />
+                <meta property="og:url" content="https://wedding-ulfa-hasan.vercel.app/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image:type" content="image/jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon.jpg" />
+                <link rel="canonical" href="https://wedding-ulfa-hasan.vercel.app/" />
+                <link rel="icon" type="image/jpg" sizes="32x32" href="/favicon.jpg" />
             </head>
             <body className={` antialiased`}>
                 {children}

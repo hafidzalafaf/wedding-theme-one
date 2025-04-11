@@ -1309,7 +1309,10 @@ export default function Home() {
                                                     </motion.p>
                                                     <div className="flex flex-col mb-6 mt-6">
                                                         <div className="flex justify-center">
-                                                            <CopyToClipboard textToCopy="Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec Subah Kab Batang" />
+                                                            <CopyToClipboard
+                                                                textToCopy="Kp Klalen Kendal, Ds Srimahi, Kec Tambun
+                                                        Utara, Kab Bekasi Jawa Barat"
+                                                            />
                                                         </div>
                                                     </div>
                                                 </div>

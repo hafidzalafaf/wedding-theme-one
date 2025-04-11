@@ -515,6 +515,16 @@ export default function Home() {
                                                 >
                                                     Putri Kedua Bp Sanyoto & Ibu Khalimah Sadiyah
                                                 </motion.p>
+                                                <motion.p
+                                                    initial={animationConfig.initial}
+                                                    whileInView={animationConfig.whileInView}
+                                                    exit={animationConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.6 }}
+                                                    className=" text-xs  font-normal quicksand-font text-[#483C32] mb-2"
+                                                >
+                                                    Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec Subah
+                                                    Kab Batang
+                                                </motion.p>
                                                 <motion.div
                                                     initial={animationConfig.initial}
                                                     whileInView={animationConfig.whileInView}
@@ -585,6 +595,16 @@ export default function Home() {
                                                     className=" text-xs text-right font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
                                                     Putra Ketiga Bp Nurman (Alm) & Ibu Entin
+                                                </motion.p>
+                                                <motion.p
+                                                    initial={animationConfig.initial}
+                                                    whileInView={animationConfig.whileInView}
+                                                    exit={animationConfig.exit}
+                                                    transition={{ duration: 0.5, delay: 0.8 }}
+                                                    className=" text-xs text-right font-normal quicksand-font text-[#483C32] mb-2"
+                                                >
+                                                    Kp Klalen Kendal, Ds Srimahi, Kec Tambun Utara,
+                                                    Kab Bekasi Jawa Barat
                                                 </motion.p>
                                                 <motion.div
                                                     initial={animationConfig.initial}
@@ -1274,8 +1294,8 @@ export default function Home() {
                                                         className="text-md leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                     >
                                                         {' '}
-                                                        Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec
-                                                        Subah Kab Batang
+                                                        Kp Klalen Kendal, Ds Srimahi, Kec Tambun
+                                                        Utara, Kab Bekasi Jawa Barat
                                                     </motion.p>
                                                     <motion.p
                                                         initial={animationConfig.initial}

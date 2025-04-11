@@ -1305,7 +1305,7 @@ export default function Home() {
                                                         className="text-md leading-6 font-semibold quicksand-font text-[#483C32] text-center mt-3"
                                                     >
                                                         {' '}
-                                                        An. Ulfatul Khasanah
+                                                        An. Ahmad Nurhasan
                                                     </motion.p>
                                                     <div className="flex flex-col mb-6 mt-6">
                                                         <div className="flex justify-center">

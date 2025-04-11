@@ -603,7 +603,7 @@ export default function Home() {
                                                     transition={{ duration: 0.5, delay: 0.8 }}
                                                     className=" text-xs text-right font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
-                                                    Kp Klalen Kendal, Ds Srimahi, Kec Tambun Utara,
+                                                    Kp Kalen Kendal, Ds Srimahi, Kec Tambun Utara,
                                                     Kab Bekasi Jawa Barat
                                                 </motion.p>
                                                 <motion.div
@@ -1294,7 +1294,7 @@ export default function Home() {
                                                         className="text-md leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                     >
                                                         {' '}
-                                                        Kp Klalen Kendal, Ds Srimahi, Kec Tambun
+                                                        Kp Kalen Kendal, Ds Srimahi, Kec Tambun
                                                         Utara, Kab Bekasi Jawa Barat
                                                     </motion.p>
                                                     <motion.p
@@ -1310,7 +1310,7 @@ export default function Home() {
                                                     <div className="flex flex-col mb-6 mt-6">
                                                         <div className="flex justify-center">
                                                             <CopyToClipboard
-                                                                textToCopy="Kp Klalen Kendal, Ds Srimahi, Kec Tambun
+                                                                textToCopy="Kp Kalen Kendal, Ds Srimahi, Kec Tambun
                                                         Utara, Kab Bekasi Jawa Barat"
                                                             />
                                                         </div>

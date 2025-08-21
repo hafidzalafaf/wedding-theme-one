@@ -52,10 +52,51 @@ export default function Countdown({ date }: Countdown) {
             </div>,
         )
     })
+
+    const countdownFinish = () => {
+        return (
+            <>
+                <div className="flex items-center">
+                    <div className="flex flex-col gap-1 items-center">
+                        <span className="text-3xl text-slate-600 font-bold">0</span>
+                        <span className="text-xs text-slate-600 font-medium">Hari</span>
+                    </div>
+                    <div className="flex items-start px-2">
+                        <span className="text-3xl text-slate-600 font-bold">:</span>
+                    </div>
+                </div>
+                <div className="flex items-center">
+                    <div className="flex flex-col gap-1 items-center">
+                        <span className="text-3xl text-slate-600 font-bold">0</span>
+                        <span className="text-xs text-slate-600 font-medium">Jam</span>
+                    </div>
+                    <div className="flex items-start px-2">
+                        <span className="text-3xl text-slate-600 font-bold">:</span>
+                    </div>
+                </div>
+                <div className="flex items-center">
+                    <div className="flex flex-col gap-1 items-center">
+                        <span className="text-3xl text-slate-600 font-bold">0</span>
+                        <span className="text-xs text-slate-600 font-medium">Menit</span>
+                    </div>
+                    <div className="flex items-start px-2">
+                        <span className="text-3xl text-slate-600 font-bold">:</span>
+                    </div>
+                </div>
+                <div className="flex items-center">
+                    <div className="flex flex-col gap-1 items-center">
+                        <span className="text-3xl text-slate-600 font-bold">0</span>
+                        <span className="text-xs text-slate-600 font-medium">Detik</span>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
     return (
         <div className="px-3 sm:px-4 bg-white rounded-xl bg-opacity-100">
             <div className="flex gap-0 px-6 py-3 justify-center ">
-                {timerComponents.length ? timerComponents : <span>Waktu habis!</span>}
+                {timerComponents.length ? timerComponents : countdownFinish()}
             </div>
         </div>
     )

@@ -284,10 +284,6 @@ export default function Home() {
                                         </motion.button>
                                     </div>
                                 </div>
-
-                                {/* {BottomRightFlowers()} */}
-                                {/* {BottomLeftFlowers()} */}
-                                {/* {TopFlowers()} */}
                             </div>
                         </div>
                     </motion.section>
@@ -522,8 +518,8 @@ export default function Home() {
                                                     transition={{ duration: 0.5, delay: 0.6 }}
                                                     className=" text-xs  font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
-                                                    Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec Subah
-                                                    Kab Batang
+                                                    Dk Krajan Rt 01 Rw 02 Ds Batang Kec Batang Kab
+                                                    Batang
                                                 </motion.p>
                                                 <motion.div
                                                     initial={animationConfig.initial}
@@ -603,8 +599,7 @@ export default function Home() {
                                                     transition={{ duration: 0.5, delay: 0.8 }}
                                                     className=" text-xs text-right font-normal quicksand-font text-[#483C32] mb-2"
                                                 >
-                                                    Kp Kalen Kendal, Ds Srimahi, Kec Tambun Utara,
-                                                    Kab Bekasi Jawa Barat
+                                                    Kp Srimahi, Ds Batang, Kec Batang, Kab Batang
                                                 </motion.p>
                                                 <motion.div
                                                     initial={animationConfig.initial}
@@ -775,7 +770,7 @@ export default function Home() {
                                                             }}
                                                             className="text-[#483C32] quicksand-font"
                                                         >
-                                                            April 2025
+                                                            Oktober 2025
                                                         </motion.p>
                                                     </div>
                                                 </div>
@@ -797,8 +792,8 @@ export default function Home() {
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     {' '}
-                                                    Lokasi : Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec
-                                                    Subah Kab Batang
+                                                    Lokasi : Dk Krajan Rt 01 Rw 02 Ds Batang, Kec
+                                                    Batang, Kab Batang
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
@@ -807,7 +802,7 @@ export default function Home() {
                                                             duration: 0.5,
                                                             delay: 1.3,
                                                         }}
-                                                        href="https://maps.app.goo.gl/ByJT35gBf3Fn5eZt9"
+                                                        href="https://maps.app.goo.gl/a2XKW4PLY2BFwf6k9"
                                                         target="_blank"
                                                         className="px-5 py-2 mt-4 rounded-3xl border border-[#483C32] text-[#483C32]  font-normal text-sm"
                                                     >
@@ -874,7 +869,7 @@ export default function Home() {
                                                             }}
                                                             className="text-[#483C32] quicksand-font"
                                                         >
-                                                            April 2025
+                                                            Oktober 2025
                                                         </motion.p>
                                                     </div>
                                                 </div>
@@ -896,8 +891,8 @@ export default function Home() {
                                                     className="text-sm leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                 >
                                                     {' '}
-                                                    Lokasi : Dk Krajan Rt 01 Rw 02 Ds Keborangan Kec
-                                                    Subah Kab Batang
+                                                    Lokasi : Dk Krajan Rt 01 Rw 02 Ds Batang, Kec
+                                                    Batang, Kab Batang
                                                 </motion.p>
                                                 <div className="flex justify-center">
                                                     <motion.a
@@ -906,7 +901,7 @@ export default function Home() {
                                                             duration: 0.5,
                                                             delay: 1.3,
                                                         }}
-                                                        href="https://maps.app.goo.gl/ByJT35gBf3Fn5eZt9"
+                                                        href="https://maps.app.goo.gl/a2XKW4PLY2BFwf6k9"
                                                         target="_blank"
                                                         className="px-5 py-2 mt-4 rounded-3xl border border-[#483C32] text-[#483C32]  font-normal text-sm"
                                                     >
@@ -1229,7 +1224,7 @@ export default function Home() {
                                                             }}
                                                             className="text-md leading-6 font-semibold quicksand-font text-[#483C32] text-center"
                                                         >
-                                                            1390029292608
+                                                            00000000001
                                                         </motion.p>
                                                         <motion.p
                                                             initial={animationConfig.initial}
@@ -1248,7 +1243,7 @@ export default function Home() {
 
                                                         <div className="flex flex-col mb-6 mt-6">
                                                             <div className="flex justify-center">
-                                                                <CopyToClipboard textToCopy="1390029292608" />
+                                                                <CopyToClipboard textToCopy="0000000001" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1294,8 +1289,8 @@ export default function Home() {
                                                         className="text-md leading-6 font-normal quicksand-font text-[#483C32] text-center"
                                                     >
                                                         {' '}
-                                                        Kp Kalen Kendal, Ds Srimahi, Kec Tambun
-                                                        Utara, Kab Bekasi Jawa Barat
+                                                        Kp Srimahi, Ds Batang, Kec Batang, Kab
+                                                        Batang
                                                     </motion.p>
                                                     <motion.p
                                                         initial={animationConfig.initial}
@@ -1309,10 +1304,7 @@ export default function Home() {
                                                     </motion.p>
                                                     <div className="flex flex-col mb-6 mt-6">
                                                         <div className="flex justify-center">
-                                                            <CopyToClipboard
-                                                                textToCopy="Kp Kalen Kendal, Ds Srimahi, Kec Tambun
-                                                        Utara, Kab Bekasi Jawa Barat"
-                                                            />
+                                                            <CopyToClipboard textToCopy="Kp Srimahi, Ds Batang, Kec Batang, Kab Batang" />
                                                         </div>
                                                     </div>
                                                 </div>
